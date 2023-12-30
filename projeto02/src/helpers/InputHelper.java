@@ -2,6 +2,8 @@ package helpers;
 
 import javax.swing.JOptionPane;
 
+import enums.TipoContratacao;
+
 public class InputHelper {
 	
 	public static Integer lerId (String mensagem) {
@@ -13,4 +15,18 @@ public class InputHelper {
 		return JOptionPane.showInputDialog(mensagem);
 	}
 	
+	public static TipoContratacao lerTipoContratacao(String mensagem) {
+		Integer opcao = Integer.parseInt(JOptionPane.showInputDialog("Informe (1)CLT, (2)Estagio, (3)Terceirizado"));
+		
+		switch (opcao) {
+			case 1:
+				return TipoContratacao.CLT;
+			case 2:
+				return TipoContratacao.ESTAGIO;
+			case 3:
+				return TipoContratacao.TERCEIRIZADO;
+			default:
+				return null;
+		}
+	}
 }
