@@ -28,6 +28,7 @@ public class Program {
 			funcionario.setNome(InputHelper.lerTexto("Informe o nome do funcionário:"));
 			funcionario.setCpf(InputHelper.lerTexto("Informe o cpf do funcionário:"));
 			funcionario.setMatricula(InputHelper.lerTexto("Informe a matrícula do funcionário:"));
+			funcionario.setTipoContratacao(InputHelper.lerTipoContratacao("Informe o tipo de contratação:"));
 			
 			ClienteRepository clienteRepository = new ClienteRepository();
 			clienteRepository.exportarDados(cliente);
